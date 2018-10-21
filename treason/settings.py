@@ -62,7 +62,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-            ],
+            ], 
         },
     },
 ]
@@ -73,12 +73,23 @@ WSGI_APPLICATION = 'treason.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.sqlite3',
+#        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#    }
+#}
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
+        'default': {
+                'ENGINE': 'django.db.backends.mysql',
+                'NAME': 'djangoproject',
+                'USER': 'root',
+                'PASSWORD': '123456',
+                'HOST': 'localhost',
+                'PORT': ''
+                }
+        }
 
 
 # Password validation
